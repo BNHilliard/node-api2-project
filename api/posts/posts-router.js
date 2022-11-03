@@ -139,7 +139,7 @@ router.get('/:id/comments', async (req, res) => {
             const messages = await Post.findPostComments(req.params.id)
             res.json(messages)
              }
-    }catch(err) {
+        }catch(err) {
                 res.status(500).json({ 
                     message: "The comments information could not be retrieved"
                  })
